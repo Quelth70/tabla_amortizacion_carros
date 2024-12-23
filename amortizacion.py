@@ -33,6 +33,7 @@ def amort_table(cost, down, interest, years, insurance, accesories, extras, **kw
     
         if i == 0:
             table["No. de Pago"].append(i)
+            table["Fecha de Pago"].append(pay_date)
             table["Capital Restante"].append(principal_car_left + ins_left)
             table["Capital Amort. Vehiculo"].append(i)
             table["Capital Amort. Seguro"].append(i)
@@ -57,6 +58,7 @@ def amort_table(cost, down, interest, years, insurance, accesories, extras, **kw
             ins_left -= ins_principal
 
             table["No. de Pago"].append(i)
+            table["Fecha de Pago"].append(pay_date)
             table["Capital Restante"].append(principal_car_left + ins_left)
             table["Capital Amort. Vehiculo"].append(car_principal)
             table["Capital Amort. Seguro"].append(ins_principal)
@@ -79,6 +81,7 @@ def amort_table(cost, down, interest, years, insurance, accesories, extras, **kw
             int_vat = round((car_int + ins_int) * .16,2)
 
             table["No. de Pago"].append(i)
+            table["Fecha de Pago"].append(pay_date)
             table["Capital Amort. Vehiculo"].append(car_principal)
             table["Capital Amort. Seguro"].append(ins_principal)
             table["Intereses del Periodo"].append(car_int + ins_int)
@@ -129,6 +132,7 @@ def first_year_free_amort_table(cost, down, interest, years, insurance, accesori
 
         if i == 0:
             table["No. de Pago"].append(i)
+            table["Fecha de Pago"].append(pay_date)
             table["Capital Restante"].append(principal_car_left + ins_left)
             table["Capital Amort. Vehiculo"].append(i)
             table["Capital Amort. Seguro"].append(i)
@@ -149,6 +153,7 @@ def first_year_free_amort_table(cost, down, interest, years, insurance, accesori
             principal_car_left -= car_principal
 
             table["No. de Pago"].append(i)
+            table["Fecha de Pago"].append(pay_date)
             table["Capital Restante"].append(principal_car_left + ins_left)
             table["Capital Amort. Vehiculo"].append(car_principal)
             table["Capital Amort. Seguro"].append(0)
@@ -176,6 +181,7 @@ def first_year_free_amort_table(cost, down, interest, years, insurance, accesori
             ins_left -= ins_principal
 
             table["No. de Pago"].append(i)
+            table["Fecha de Pago"].append(pay_date)
             table["Capital Restante"].append(principal_car_left + ins_left)
             table["Capital Amort. Vehiculo"].append(car_principal)
             table["Capital Amort. Seguro"].append(ins_principal)
@@ -198,6 +204,7 @@ def first_year_free_amort_table(cost, down, interest, years, insurance, accesori
             int_vat = round((car_int + ins_int) * .16,2)
 
             table["No. de Pago"].append(i)
+            table["Fecha de Pago"].append(pay_date)
             table["Capital Amort. Vehiculo"].append(car_principal)
             table["Capital Amort. Seguro"].append(ins_principal)
             table["Intereses del Periodo"].append(car_int + ins_int)
